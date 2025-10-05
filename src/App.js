@@ -50,10 +50,9 @@ function Steps() {
             <div className={step >= 3 ? "active" : ""}>3</div>
           </div>
 
-          <p className="message">
-            Step {step}: {messages[step - 1]}
-            {/* {test.name} */}
-          </p>
+          <SendMessage step={step}>
+            <p className="message">{messages[step - 1]}</p>
+          </SendMessage>
 
           <div className="buttons">
             <Button bgColor="#7950f2" textColor="#fff" onClick={handlePrevious}>
@@ -66,6 +65,17 @@ function Steps() {
           </div>
         </div>
       )}
+    </div>
+  );
+}
+function SendMessage({ step, children }) {
+  return (
+    <div className="message">
+      <h3>
+        step {step}
+        {children}
+        {/* {test.name} */}
+      </h3>
     </div>
   );
 }
