@@ -81,10 +81,12 @@ function Steps() {
   );
 }
 function Button({ bgColor, textColor, onClick, text }) {
-  <button
-    style={{ backgroundColor: bgColor, color: textColor }}
-    onClick={onClick}
-  >
-    {text}
-  </button>;
+  return (
+    <button
+      style={{ backgroundColor: bgColor, color: textColor }}
+      onClick={onClick}
+    >
+      {text}
+    </button>
+  );
 }
